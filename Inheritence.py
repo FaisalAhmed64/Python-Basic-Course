@@ -1,23 +1,12 @@
-class mammal:
-    def walk(self):
-        print("walk")
+import converters
+from converters import kgs_to_lbs
+from utils import find_max
 
+kgs_to_lbs(100)
+converters.lbs_kg(30)
+converters.kgs_to_lbs(20)
+print(converters.lbs_kg(80))
 
-class dog(mammal):
-    def bark(self):
-        print("i am kutttaa")
-
-
-class cat(mammal):
-    def mew(self):
-        print("i am billooooi")
-
-
-dog1 = dog()
-dog1.walk()
-dog1.bark()
-cat1 = cat()
-cat1.walk()
-cat1.mew()
-
-
+numbers = [10, 20, 2, 39]
+max = str(find_max(numbers))
+print("the maximum number is " + max)

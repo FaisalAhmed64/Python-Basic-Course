@@ -1,12 +1,25 @@
-Secret_number = 9
-guess_count = 0
-guess_limit = 3
-
-# while guess_count<guess_limit:
-guss = int(input("guess: "))
-guess_count += 1
-if guss == Secret_number:
-    print("you win")
-    break
-else:
-print("you failed")
+command = ""
+started = False
+while True:
+    command = input("> ").lower()
+    if command == "start":
+        if started:
+            print("car is already started")
+        else:
+            started = True
+            print(" car started")
+    elif command == "stop":
+        if not started:
+            print("the is already stopped..")
+        else:
+            print("car stopped..")
+    elif command == "help":
+        print("""
+start- to start the car
+top- to stopped
+quit-to exit
+         """)
+    elif command == "quit":
+        break
+    else:
+        print("sorry i don't understand")
